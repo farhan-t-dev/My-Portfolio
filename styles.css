@@ -309,13 +309,18 @@ span {
   margin: auto;
 }
 
+.project-img{
+  width: 100%;
+  height: auto;
+}
+
 .project-tile {
   background-color: rgba(128, 128, 128, 0.274);
   width: auto;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 50px 25px;
-  height: 300px;
+  height: auto;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -366,6 +371,7 @@ span {
 
   .project-tile {
     text-align: center;
+    height: auto;
   }
 
   .project-tile h3 {
@@ -376,6 +382,9 @@ span {
     font-size: 1.2rem;
   }
 
+  .project-img {
+    width: 400px;
+  }
 }
 
 #contact {
