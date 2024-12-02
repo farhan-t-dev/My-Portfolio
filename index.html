@@ -16,6 +16,7 @@
       <!-- Navbar -->
       <nav id="navbar">
         <a href="#welcome-section" class="active"> Welcome</a>
+        <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -23,7 +24,10 @@
     <!-- Welcome Section -->
     <section id="welcome-section" class="full-height">
       <div class="full-height-img">
-        <img src="https://cdn.imgchest.com/files/d7ogc85w5ky.png" alt="" />
+        <img
+          src="images/pfp.two.png"
+          alt="A photo of this Portfolio's owner farhan"
+        />
       </div>
       <div class="full-height-content">
         <h1>Welcome to Farhan T.'s Portfolio</h1>
@@ -37,25 +41,80 @@
         <a
           href="https://www.linkedin.com/in/tanverul-islam-farhan-a7152220b/"
           target="_blank"
+          rel="noopener noreferrer"
           ><i class="fa-brands fa-linkedin"></i
         ></a>
-        <a href="https://github.com/Cooljr" target="_blank"
+        <a
+          href="https://github.com/farhan-t-dev"
+          target="_blank"
+          rel="noopener noreferrer"
           ><i class="fa-brands fa-github"></i
         ></a>
         <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a
+          href="https://www.fiverr.com/tan_farhan"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            src="images/icons8-fiverr-50.png"
+            alt="Fiverr Logo"
+            class="social-icons"
+        /></a>
       </div>
     </section>
 
+    <section id="about">
+      <div class="about-container">
+        <h1>About Me</h1>
+        <p>
+          Hi, I'm <span>Farhan T.</span>, a passionate and detail-oriented
+          <strong>front-end developer</strong> with a knack for creating
+          visually appealing and responsive websites. I specialize in turning
+          ideas into fully functional, user-friendly designs.
+        </p>
+        <p>
+          I have strong skills in <strong>HTML, CSS</strong>, and
+          <strong>JavaScript</strong>, which I use to build seamless and
+          responsive websites.
+        </p>
+        <p>
+          I love solving problems and bringing creative ideas to life through
+          code. My goal is to build websites that not only look great but also
+          provide an exceptional user experience.
+        </p>
+        <p>
+          I hold a <strong>Responsive Web Design certificate</strong> from
+          freeCodeCamp and have successfully completed freelance projects,
+          including improving websites and deploying them on GitHub.
+        </p>
+        <p>
+          Outside of coding, I enjoy experimenting with new gadgets, exploring
+          minimalist design ideas, and learning new technologies to stay ahead
+          in the ever-evolving tech world. And also a bit too into cats and
+          anime.
+        </p>
+        <p>
+          I'm always eager to collaborate on exciting projects or assist with
+          web development challenges.
+          <a href="#contact"
+            >Feel free to reach out—I’d love to hear from you!</a
+          >
+        </p>
+      </div>
+    </section>
     <!-- Projects Section -->
     <section id="projects">
       <div class="project-head">
         <h1>Projects</h1>
-        <p>The projects i made :</p>
       </div>
       <div class="project-all">
         <div class="project-tile">
-          <h3>Project 1</h3>
-          <img src="Screenshot 2024-11-21 192701.png" alt="A photo of the website" class="project-img"/>
+          <img
+            src="images/Screenshot 2024-11-21 192701.png"
+            alt="A photo of the website"
+            class="project-img"
+          />
+          <h3>Landing Page</h3>
           <p>A Product landing page demo made with just css and html.</p>
           <br />
           <a
@@ -65,10 +124,14 @@
           >
         </div>
         <div class="project-tile">
-          <h3>Project 2</h3>
-          <img src="Screenshot 2024-11-21 201842.png" alt="A photo of the website" class="project-img"/>
+          <img
+            src="images/Screenshot 2024-11-21 201842.png"
+            alt="A photo of the website"
+            class="project-img"
+          />
+          <h3>Technical Documentation Page</h3>
           <p>
-            A Technical documentation website regarding javascript made with
+            A Technical documentation webpage regarding javascript made with
             html and css.
           </p>
           <br />
@@ -93,18 +156,90 @@
     </section>
 
     <!-- Contact Section -->
-    <div id="contact">
-      <h2>Contact</h2>
-      <p>Email: tanverulislam8@gmail.com</p>
-      <br />
-      <a id="profile-link" href="https://github.com/Cooljr" target="_blank"
-        >GitHub Profile</a
-      >
-    </div>
+    <section id="contact">
+      <div class="contact-container">
+        <h1>Contact Me</h1>
+        <p>
+          I'm available for freelance work, collaborations, or just a friendly
+          chat. Reach out through any of the channels below, and I'll get back
+          to you soon.
+        </p>
+        <ul class="contact-details">
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:tanverulislam8@gmail.com"
+              >tanverulislam8@gmail.com</a
+            >
+          </li>
+          <li>
+            <img
+              src="images/icons8-fiverr-50.png"
+              alt="Fiverr Logo"
+              style="width: 25px; margin-right: 1rem"
+            />
+            <a href="https://fiverr.com/tan_farhan" target="_blank"
+              >Fiverr Profile</a
+            >
+          </li>
+
+          <li>
+            <i class="fab fa-linkedin"></i>
+            <a
+              href="https://www.linkedin.com/in/tanverul-islam-farhan-a7152220b/"
+              target="_blank"
+              >LinkedIn Profile</a
+            >
+          </li>
+          <li>
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/farhan-t-dev" target="_blank"
+              >github.com/farhan-t-dev</a
+            >
+          </li>
+        </ul>
+        <h3>OR</h3>
+        <form action="https://formspree.io/f/xzzbyegj" method="POST">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            required
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email"
+            required
+          />
+
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Your message..."
+            required
+          ></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer>
+      <nav>
+        <a href="#welcome-section">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
       <p>&copy; 2024 Farhan T. All rights reserved.</p>
-      <p><a href="#welcome-section">Back to Top</a></p>
     </footer>
   </body>
 </html>
