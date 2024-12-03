@@ -13,6 +13,11 @@
   <body>
     <header>
       <a href="#" class="logo">Farhan</a>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <!-- Navbar -->
       <nav id="navbar">
         <a href="#welcome-section" class="active"> Home</a>
@@ -20,6 +25,7 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
+      
     </header>
     <!-- Welcome Section -->
     <section id="welcome-section" class="full-height">
@@ -233,35 +239,9 @@
 
     <!-- Footer -->
     <footer>
-      <nav>
-        <a href="#welcome-section">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
       <p>&copy; 2024 Farhan T. All rights reserved.</p>
     </footer>
 
-    <script>
-      const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("#navbar a");
-
-window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 50) {
-            current = section.getAttribute("id");
-        }
-    });
-
-    navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-        }
-    });
-});
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
