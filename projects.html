@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Page</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/index.html" class="logo">Farhan</a>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- Navbar -->
+      <nav id="navbar">
+        <a href="/" class="active"> Home</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="container">
+<!-- Modal Box -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      
+      <h2 id="modalTitle"></h2>
+      <img id="modalImage" src="" alt="" class="modal-img">
+      <p id="modalDescription"></p>
+      <button class="prev">&lt;</button>
+      <a id="modalLink" href="" target="_blank">View Project</a>
+      <button class="next">&gt;</button>
+  </div>
+</div>
+
+      <!-- Project Gallery -->
+      <section id="gallery">
+        <div class="project-head">
+          <h2>Project Gallery</h2>
+          <p class="project-hint">(Click on the images to view the projects)</p>
+        </div>
+        <div class="project-all" id="projects">
+          <!-- Projects will be dynamically loaded here -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        © 2025 Farhan T. | <a href="https://farhanpf.netlify.app/">Portfolio</a>
+      </p>
+    </footer>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/project-loader.js"></script>
+  </body>
+</html>

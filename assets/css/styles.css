@@ -153,6 +153,11 @@ section {
   padding: 5rem 9% 5rem;
 }
 
+main {
+  min-height: 100vh;
+  padding: 5rem 9% 5rem;
+}
+
 .full-height {
   display: flex;
   justify-content: center;
@@ -169,6 +174,7 @@ section {
 
 span {
   color: #b74b4b;
+  font-weight: 700;
 }
 
 .full-height-content h3 {
@@ -231,14 +237,15 @@ span {
   display: inline-block;
   padding: 1rem 2.8rem;
   background-color: black;
-  border-radius: 4rem;
+  border-radius: 1rem;
   font-size: 1.6rem;
-  color: #b74b4b;
+  color: #e0e0e0;
   letter-spacing: 0.3rem;
   font-weight: 600;
   border: 2px solid #b74b4b;
   transition: 0.3s ease;
   cursor: pointer;
+  margin-top: 2rem;
 }
 
 .btn:hover {
@@ -252,6 +259,7 @@ span {
   font-size: clamp(2.4rem, 3.5vw, 3rem);
   font-weight: 600;
   min-width: 280px;
+  transition: 0.3s ease;
 }
 
 .typing-text span {
@@ -259,9 +267,11 @@ span {
 }
 
 .typing-text span::before {
-  content: "Software Developer";
+  content: "Web Developer";
   color: #b74b4b;
-  animation: words 20s infinite;
+  overflow: hidden; /* Ensures the text is hidden until typed */
+  border-right: 0.15em solid #b74b4b;
+  animation: words 20s, blink-caret 0.75s step-end infinite;
 }
 
 .typing-text span::after {
@@ -272,13 +282,12 @@ span {
   height: 50px;
   border-left: 3px solid black;
   right: -8;
-  animation: cursor 0.6s infinite;
+  transition: 0.3s ease;
 }
 
-@keyframes cursor {
-  to {
-    border-left: 3px solid #b74b4b;
-  }
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #b74b4b; }
 }
 
 @keyframes words {
@@ -288,7 +297,7 @@ span {
   }
   21%,
   40% {
-    content: "Front End Developer";
+    content: "Frontend Developer";
   }
   41%,
   60% {
@@ -303,6 +312,8 @@ span {
     content: "Web Fixer";
   }
 }
+
+
 
 @media (max-width: 1000px) {
   .full-height {
@@ -330,53 +341,192 @@ span {
   }
 }
 
-#about {
-  color: white;
-  padding: 5rem 9%;
-}
-
 .about-container {
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.8;
+  background-color: #161616;
+  padding: 5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
-#about h1 {
-  font-size: clamp(3rem, 5vw, 5rem);
-  margin-bottom: 2rem;
-}
-
-#about p {
-  font-size: clamp(1.4rem, 2vw, 1.8rem);
+.about-container h1 {
+  font-size: clamp(2.8rem, 4vw, 4rem);
+  color: #e0e0e0;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-#about span {
+.about-container p {
+  font-size: clamp(1.4rem, 2.5vw, 1.6rem);
+  line-height: 1.8;
+  color: #e0e0e1;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  padding: 1rem 5rem;
+  text-shadow: 0px 0px 2px #282727;
+}
+
+.first-para {
+  text-align: center !important;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem) !important;
+}
+
+.about-container a {
   color: #b74b4b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.about-container a:hover {
+  color: #b74b4b;
+  text-decoration: underline;
+}
+
+.fun-facts {
+  margin-top: 3rem;
+}
+
+.fun-facts h2 {
+  font-size: clamp(2.4rem, 4vw, 3rem);
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.fun-facts ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.fun-facts li {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  color: #aab;
+  margin-bottom: 1rem;
+}
+
+.fun-facts li i {
+  color: #b74b4b;
+  margin-right: 0.5rem;
+}
+
+/* projects section css */
+
+/* Modal Box CSS */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: #282727;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  max-width: 800px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
   font-weight: bold;
 }
 
-#about strong {
-  color: #e0e0e0;
-}
-
-#about a {
+.close:hover,
+.close:focus {
   color: #b74b4b;
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
+  cursor: pointer;
 }
 
-#about a:hover {
-  color: white;
-  text-decoration: underline;
+.modal-img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px #161616;
 }
+
+#modalTitle {
+  font-size: 2.5rem;
+  margin: 10px;
+}
+
+#modalDescription {
+  font-size: 16px;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+#modalLink {
+  display: inline-block;
+  padding: 1.2rem 2rem;
+  background-color: #161616;
+  border-radius: 1rem;
+  color: #e0e0e0;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  border: 2px solid #b74b4b;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+#modalLink:hover,
+#modalLink:active {
+  transform: scale3d(1.03);
+  background-color: #b74b4b;
+  color: black;
+  box-shadow: 0 0 25px #b74b4b;
+}
+
+button.prev, button.next {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+button.prev:hover, button.next:hover {
+  background-color: #b74b4b;
+  transform: scale3d(1.03);
+  box-shadow: 0 0 25px #b74b4b;
+}
+/* Projects card styling */
 
 .project-head {
   text-align: center;
   margin-bottom: 30px;
   font-size: clamp(2.8rem, 4vw, 4rem);
   margin: 0;
+}
+
+.project-hint {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: clamp(1.4rem, 2vw, 1.6rem);
+  color: #aaa;
 }
 
 .project-all {
@@ -416,7 +566,7 @@ span {
 
 .project-tile h3 {
   font-size: clamp(1.8rem, 2.5vw, 2rem);
-  margin: 20px 0;
+  margin: 20px;
 }
 
 .project-tile p {
@@ -449,6 +599,35 @@ span {
   color: black;
   box-shadow: 0 0 25px #b74b4b;
 }
+
+.view-more {
+  display: flex;
+  justify-content: center;
+  margin-top:8rem;
+}
+
+.view-more-btn {
+  padding: 1rem 2.8rem;
+  background-color: black;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  color: #e0e0e0;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  border: 2px solid #b74b4b;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.view-more-btn:hover,
+.view-more-btn:active {
+  transform: scale3d(1.03);
+  background-color: #b74b4b;
+  color: black;
+  box-shadow: 0 0 25px #b74b4b;
+}
+
+/* Contact Section CSS */
 
 #contact {
   color: white;
@@ -520,7 +699,7 @@ form label {
 form input,
 form textarea {
   width: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
   font-size: 1rem;
   border: 1px solid #b74b4b;
   border-radius: 5px;
