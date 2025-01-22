@@ -112,27 +112,3 @@ window.addEventListener("keydown", (event) => {
 
 // Initial render of the gallery
 renderGallery();
-
-// Function to render the projects on the index page
-function renderIndexProjects() {
-  const indexProjectsContainer = document.getElementById("index-projects");
-  indexProjectsContainer.innerHTML = ""; // Clear existing content
-
-  // Sort projects by ID in descending order and take the first three
-  const sortedProjects = [...projects].sort((a, b) => b.id - a.id).slice(0, 3);
-
-  sortedProjects.forEach((project) => {
-    const projectCard = document.createElement("div");
-    projectCard.classList.add("project-tile");
-    projectCard.innerHTML = `
-      <img src="${project.image}" alt="${project.title}" class="project-img">
-      <h3>${project.title}</h3>
-      <p>${project.description}</p>
-      <a href="${project.link}" target="_blank">View on GitHub</a>
-    `;
-    indexProjectsContainer.appendChild(projectCard);
-  });
-}
-
-// Initial render of the projects on the index page
-renderIndexProjects();
