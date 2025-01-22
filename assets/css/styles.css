@@ -412,7 +412,7 @@ span {
   color: #83c5be;
   overflow: hidden; /* Ensures the text is hidden until typed */
   border-right: 0.15em solid #83c5be;
-  animation: words 20s, blink-caret 0.75s step-end infinite;
+  animation: words 20s infinite, blink-caret 0.75s step-end infinite;
 }
 
 .typing-text span::after {
@@ -917,14 +917,6 @@ input::placeholder,
 textarea::placeholder {
   color: #e0e0e0;
   font-size: 1.2rem;
-}
-
-form button {
-  padding: 0.75rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
 }
 
 .footer-content {

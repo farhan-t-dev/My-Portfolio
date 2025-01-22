@@ -13,7 +13,7 @@ const projects = [
   {
     id: 2,
     title: "Technical documentation demo",
-    image: "images/technical documentation.png",
+    image: "images/Technical documentation.png",
     description:
       "A small technical documentation website built using HTML and CSS. It's a simple project that demonstrates the use of JavaScript. But it's not the best.As its the demo one.",
     link: "https://github.com/Cooljr/Technical-documentation-website",
@@ -21,7 +21,7 @@ const projects = [
   {
     id: 3,
     title: "Mini Game 1",
-    image: "images/mini role-playing game.png",
+    image: "images/Mini role-playing game.png",
     description:
       "This project is a simple role-playing game that I built using HTML, CSS, and JavaScript. It's a fun project that I really enjoyed working on.",
     link: "https://farhan-t-dev.github.io/Role-playing-game/",
