@@ -32,6 +32,21 @@ const projects = [
         "A simple weather app landing page that displays the app's functionality and design. I built this project using HTML, CSS, JavaScript, jQuery and also bootstrap. It's my first project using jQuery and bootstrap so it was a really hard and interesting one.",
       link: "https://farhan-t-dev.github.io/Weather-app-landing-page/",
     },
+    {
+      id: 5,
+      title: "US Telephone Number Checker",
+      image: "images/Telephone checker.png",
+      description: "A simple telephone number checker that validates US phone numbers. I built this project using HTML, CSS, and JavaScript. its pretty interactive and also was pretty fun to work on as it was my first project using regex.",
+      link: "https://farhan-t-dev.github.io/Telephone-number-checker/",
+    },
+    {
+      id: 6,
+      title: "Pokemon Search App",
+      image: "images/Pokemon search app.png",
+      description:
+        "A simple Pokemon search app that allows users to search for Pokemon by name or their pokedex number. I built this project for fun using HTML, CSS, JavaScript and also the Pokemon API. This was the first project i made to practise using an API.",
+      link: "https://farhan-t-dev.github.io/Pokemon-search-app/",
+    }
   ];
   
   let currentProjectIndex = 0;
