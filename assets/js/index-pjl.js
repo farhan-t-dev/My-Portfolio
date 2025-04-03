@@ -46,6 +46,14 @@ const projects = [
       description:
         "A simple Pokemon search app that allows users to search for Pokemon by name or their pokedex number. I built this project for fun using HTML, CSS, JavaScript and also the Pokemon API. This was the first project i made to practise using an API.",
       link: "https://farhan-t-dev.github.io/Pokemon-search-app/",
+    },
+    {
+      id: 7,
+      title: "Github Repo finder",
+      image: "images/Github repo.png",
+      description:
+        "A simple Github repo finder that finds random interesting repositories based on the selected language. I built this project using HTML, CSS, JavaScript and also the Github API. This was the second project i made to practise using an API.",
+      link: "https://farhan-t-dev.github.io/Github-repo-finder/",
     }
   ];
   
